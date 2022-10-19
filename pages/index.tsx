@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Header from "../components/header/Header";
+import styles from "./pages.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -10,7 +12,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Hello Next</main>
+      <div className={styles.pages}>
+        <Header />
+      </div>
     </div>
   );
 };

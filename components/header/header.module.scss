@@ -1,0 +1,23 @@
+@use "../../styles/variables" as varr;
+
+.header {
+  height: 8rem;
+  padding: 2rem varr.$main__padding;
+  background-color: aquamarine;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    color: varr.$color__primary;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
