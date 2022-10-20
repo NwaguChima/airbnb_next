@@ -3,20 +3,86 @@
 .header {
   height: 8rem;
   padding: 2rem varr.$main__padding;
-  background-color: aquamarine;
+  //   background-color: aquamarine;
+  display: flex;
+  align-items: center;
 
   &__content {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    color: varr.$color__primary;
+    width: 100%;
 
     .logo {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      color: varr.$color__primary;
 
       h1 {
         font-size: 2.5rem;
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      -o-border-radius: 100px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      gap: 1.5rem;
+      padding: 0.6rem;
+      padding-left: 3rem;
+      padding-right: 0.8rem;
+      border: 1px solid #e3e3e3;
+
+      span {
+        border-right: 1px solid #d4d4d4;
+        padding-right: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        font-weight: 100;
+        width: 10rem;
+      }
+
+      input::placeholder {
+        font-family: varr.$thin-font;
+        color: varr.$text__black;
+        font-weight: 200;
+      }
+
+      i {
+        height: 3.5rem;
+        width: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: varr.$color__primary;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        color: white;
+
+        justify-self: flex-end;
+      }
+    }
+
+    .profile {
+      display: flex;
+
+      &__avater {
+        display: flex;
       }
     }
   }

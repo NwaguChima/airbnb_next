@@ -15,12 +15,12 @@ const Header: React.FC<HeaderProps> = ({}) => {
           <Image
             src="/images/airbnb-icon.svg"
             alt="logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
           <h1>airbnb</h1>
         </div>
-        <div>
+        <div className={styles.search}>
           <span>Anywhere</span>
           <span>Any week</span>
           <input type="text" placeholder="Add guests" />
@@ -28,12 +28,12 @@ const Header: React.FC<HeaderProps> = ({}) => {
             <IoSearchOutline />
           </i>
         </div>
-        <div>
+        <div className={styles.profile}>
           <h3>Become a Host</h3>
           <i>
             <FiGlobe />
           </i>
-          <div>
+          <div className={styles.profile__avater}>
             <i>
               <HiBars3 />
             </i>
