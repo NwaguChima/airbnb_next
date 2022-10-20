@@ -3,9 +3,9 @@
 .header {
   height: 8rem;
   padding: 2rem varr.$main__padding;
-  //   background-color: aquamarine;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #e3e3e3;
 
   &__content {
     display: flex;
@@ -21,6 +21,10 @@
 
       h1 {
         font-size: 2.5rem;
+
+        @media screen and (max-width: varr.$breakpoint__md) {
+          display: none;
+        }
       }
     }
 
@@ -73,16 +77,47 @@
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
         color: white;
-
-        justify-self: flex-end;
       }
     }
 
     .profile {
       display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
       &__avater {
+        padding: 0.5rem;
         display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid #e3e3e3;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+
+        svg {
+          width: 3rem;
+        }
+
+        i {
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
   }
