@@ -7,11 +7,25 @@
   align-items: center;
   border-bottom: 1px solid #e3e3e3;
 
+  @media screen and (max-width: varr.$breakpoint__l) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media screen and (max-width: varr.$breakpoint__md) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    @media screen and (max-width: varr.$breakpoint__md) {
+      // display: none;
+    }
 
     .logo {
       display: flex;
@@ -22,8 +36,8 @@
       h1 {
         font-size: 2.5rem;
 
-        @media screen and (max-width: varr.$breakpoint__md) {
-          display: none;
+        @media screen and (max-width: varr.$breakpoint__l) {
+          // display: none;
         }
       }
     }
@@ -121,4 +135,24 @@
       }
     }
   }
+
+  // &__mobile {
+  //   display: flex;
+  //   gap: 1.5rem;
+  //   // background-color: rebeccapurple;
+  //   @media screen and (min-width: varr.$breakpoint__md) {
+  //     display: none;
+  //   }
+
+  //   &__text {
+  //     display: flex;
+  //     flex-direction: column;
+  //     flex-grow: 1;
+  //     background-color: red;
+
+  //     p {
+  //       display: flex;
+  //     }
+  //   }
+  // }
 }
