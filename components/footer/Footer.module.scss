@@ -6,4 +6,48 @@
   padding-right: 15rem;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: varr.$breakpoint__l) {
+    padding-left: 4rem;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: varr.$breakpoint__md) {
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @media screen and (max-width: varr.$breakpoint__l) {
+      gap: 1rem;
+    }
+
+    h4 {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-weight: 300;
+      color: varr.$text__gray;
+
+      @media screen and (max-width: varr.$breakpoint__l) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 4rem;
+        padding-bottom: 4rem;
+        border-bottom: varr.$border;
+      }
+
+      @media screen and (max-width: varr.$breakpoint__md) {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
 }
