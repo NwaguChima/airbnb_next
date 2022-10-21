@@ -1,0 +1,9 @@
+@use "../../styles/variables" as varr;
+
+.footer {
+  background-color: varr.$footerBg;
+  padding: 4rem varr.$main__padding 4rem varr.$main__padding;
+  padding-right: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
