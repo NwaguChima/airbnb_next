@@ -32,8 +32,10 @@ export const FooterNav: React.FC<FooterNavProps> = ({}) => {
           </i>
           <span>USD</span>
         </li>
-        <li>Support &#38; resources</li>
-        <span>&circ;</span>
+        <li>
+          Support &#38; resources
+          <span>&circ;</span>
+        </li>
       </ul>
     </nav>
   );
