@@ -9,7 +9,7 @@ interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
   return (
-    <footer>
+    <footer className={styles.footer_container}>
       <div className={styles.footer}>
         <nav aria-label="footer-items" className={styles.footer__support}>
           <h4>Support</h4>
@@ -56,12 +56,19 @@ export const Footer: React.FC<FooterProps> = ({}) => {
       <div className={styles.bottom}>
         <ul className={styles.bottom__left}>
           <li>&#169; {new Date().getFullYear()} Airbnb, Inc.</li>
-          <li>&#183;</li>
-          <li>Privacy</li>
-          <li>&#183;</li>
-          <li>Terms</li>
-          <li>&#183;</li>
-          <li>Sitemap</li>
+          <li className={styles.hide}>&#183;</li>
+          <li className={styles.hide}>Privacy</li>
+          <li className={styles.hide}>&#183;</li>
+          <li className={styles.hide}>Terms</li>
+          <li className={styles.hide}>&#183;</li>
+          <li className={styles.hide}>Sitemap</li>
+          <span className={styles.extra}>
+            <li>Privacy</li>
+            <li>&#183;</li>
+            <li>Terms</li>
+            <li>&#183;</li>
+            <li>Sitemap</li>
+          </span>
         </ul>
         <ul className={styles.bottom__right}>
           <li>

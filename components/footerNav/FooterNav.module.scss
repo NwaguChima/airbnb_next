@@ -1,6 +1,7 @@
 @use "../../styles/variables" as varr;
 
 .footerNav {
+  background-color: varr.$main__white;
   padding: 1.5rem varr.$main__padding;
   display: flex;
   align-items: center;

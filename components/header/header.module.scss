@@ -157,6 +157,10 @@
       display: none;
     }
 
+    @media screen and (max-width: varr.$breakpoint__xs) {
+      font-size: 80%;
+    }
+
     i {
       font-size: 2rem;
       display: flex;
