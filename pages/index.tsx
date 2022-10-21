@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { FooterNav } from "../components/footerNav/FooterNav";
 import Header from "../components/header/Header";
 import styles from "./pages.module.scss";
 
@@ -12,8 +13,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.pages}>
+      <div className={styles.index}>
         <Header />
+        <FooterNav />
       </div>
     </div>
   );

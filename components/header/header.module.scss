@@ -5,7 +5,7 @@
   padding: 2rem varr.$main__padding;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: varr.$border;
 
   @media screen and (max-width: varr.$breakpoint__l) {
     padding-left: 4rem;

@@ -48,9 +48,9 @@ const Header: React.FC<HeaderProps> = ({}) => {
           <h4>Where to?</h4>
           <p>
             <span>Anywhere</span>
-            <span>.</span>
+            <span>&#183;</span>
             <span>Any week</span>
-            <span>.</span>
+            <span>&#183;</span>
             <span>Add guests</span>
           </p>
         </div>
