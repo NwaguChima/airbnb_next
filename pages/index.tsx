@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Footer } from "../components/footer/Footer";
 import { FooterNav } from "../components/footerNav/FooterNav";
 import Header from "../components/header/Header";
+import { MainContainer } from "../components/mainContainer/MainContainer";
 import styles from "./pages.module.scss";
 
 const Home: NextPage = () => {
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
 
       <div className={styles.index}>
         <Header />
+        <MainContainer />
         <Footer />
         <FooterNav />
       </div>

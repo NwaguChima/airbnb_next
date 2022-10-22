@@ -1,11 +1,15 @@
 @use "../../styles/variables" as varr;
 
 .header {
-  height: 8rem;
+  height: 9rem;
   padding: 2rem varr.$main__padding;
   display: flex;
   align-items: center;
   border-bottom: varr.$border;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: varr.$main__white;
 
   @media screen and (max-width: varr.$breakpoint__l) {
     padding-left: 4rem;

@@ -1,0 +1,43 @@
+@use "../../styles/variables" as varr;
+
+.navContainer {
+  //   background-color: rebeccapurple;
+  height: 8rem;
+  padding: 2rem varr.$main__padding;
+  margin-top: 9rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 9rem;
+    padding: 1.3rem;
+    border: varr.$border;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    i {
+      width: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+    background-color: cadetblue;
+  }
+}
