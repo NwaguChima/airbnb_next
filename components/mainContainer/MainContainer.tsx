@@ -8,6 +8,33 @@ export const MainContainer: React.FC<MainContainerProps> = ({}) => {
   return (
     <main>
       <MainNav />
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
+      <p>Whispers</p>
     </main>
   );
 };
