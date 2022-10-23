@@ -1,4 +1,5 @@
 import React from "react";
+import { houseList } from "../../utils/houseList";
 import { MainNav } from "../mainNav/MainNav";
 import styles from "./MainContainer.module.scss";
 
@@ -8,33 +9,9 @@ export const MainContainer: React.FC<MainContainerProps> = ({}) => {
   return (
     <main>
       <MainNav />
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
-      <p>Whispers</p>
+      <div className={styles.container}>
+        {houseList.map((house) => HouseCard(house))}
+      </div>
     </main>
   );
 };
