@@ -1,0 +1,27 @@
+@use "../../styles/variables" as varr;
+
+.container {
+  padding: 4rem varr.$main__padding;
+  margin-bottom: 15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+
+  justify-items: center;
+
+  @media screen and (max-width: varr.$breakpoint__l) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media screen and (max-width: varr.$breakpoint__md) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 12rem;
+  }
+
+  @media screen and (max-width: varr.$breakpoint__sm) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

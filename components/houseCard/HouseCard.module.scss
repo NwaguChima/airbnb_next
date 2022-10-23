@@ -1,0 +1,48 @@
+@use "../../styles/variables" as varr;
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__picture {
+    display: block;
+  }
+
+  &__body {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      h3 {
+        font-weight: 400;
+      }
+
+      p {
+        font-weight: 300;
+        margin-top: 0.3rem;
+        color: varr.$text__gray;
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+      font-weight: 300;
+
+      i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.price {
+  color: varr.$text__black !important;
+  span {
+    font-weight: 500 !important;
+  }
+}
