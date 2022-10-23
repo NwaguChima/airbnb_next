@@ -1,0 +1,28 @@
+@use "../../../styles/variables" as varr;
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  cursor: pointer;
+  color: varr.$text__gray;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 2rem;
+
+  &:active,
+  &:hover {
+    color: varr.$text__black;
+  }
+
+  span {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+}
+
+.activeItem {
+  border-bottom: 3px solid varr.$text__gray;
+}

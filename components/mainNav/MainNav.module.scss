@@ -1,7 +1,7 @@
 @use "../../styles/variables" as varr;
 
 .navContainer {
-  height: 8rem;
+  height: 9rem;
   padding: 2rem varr.$main__padding;
   margin-top: 12rem;
   display: flex;
@@ -61,7 +61,11 @@
     display: flex;
     align-items: center;
     gap: 1.2rem;
-    width: 93%;
+    width: calc(100% - 11.3rem);
+
+    @media screen and (max-width: varr.$breakpoint__md) {
+      width: 100%;
+    }
 
     ul {
       display: flex;
@@ -70,7 +74,6 @@
       overflow: scroll;
       scroll-behavior: smooth;
       gap: 5rem;
-      //   padding: 1rem;
 
       &::-webkit-scrollbar {
         background: transparent;

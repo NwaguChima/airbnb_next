@@ -9,6 +9,8 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
 import styles from "./MainNav.module.scss";
+import { filterList } from "../../utils/filterList";
+import { NavItem } from "./navItem/NavItem";
 
 interface MainNavProps {}
 
@@ -16,6 +18,11 @@ export const MainNav: React.FC<MainNavProps> = ({}) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [scrollX, setScrollX] = useState(0);
   const [scrollEnd, setScrollEnd] = useState(false);
+  const [selected, setSelected] = useState<
+    { id: number; category: string } | undefined
+  >();
+
+  console.log(selected);
 
   const slide = (shift: number) => {
     scrollRef.current!.scrollLeft += shift;
@@ -72,36 +79,15 @@ export const MainNav: React.FC<MainNavProps> = ({}) => {
         }
 
         <ul ref={scrollRef} onScroll={scrollCheck}>
-          <li>Hello 1</li>
-          <li>Hello 2</li>
-          <li>Hello 3</li>
-          <li>Hello 4</li>
-          <li>Hello 5</li>
-          <li>Hello 6</li>
-          <li>Hello 7</li>
-          <li>Hello 8</li>
-          <li>Hello 9</li>
-          <li>Hello 10</li>
-          <li>Hello 1</li>
-          <li>Hello 2</li>
-          <li>Hello 3</li>
-          <li>Hello 4</li>
-          <li>Hello 5</li>
-          <li>Hello 6</li>
-          <li>Hello 7</li>
-          <li>Hello 8</li>
-          <li>Hello 9</li>
-          <li>Hello 10</li>
-          <li>Hello 1</li>
-          <li>Hello 2</li>
-          <li>Hello 3</li>
-          <li>Hello 4</li>
-          <li>Hello 5</li>
-          <li>Hello 6</li>
-          <li>Hello 7</li>
-          <li>Hello 8</li>
-          <li>Hello 9</li>
-          <li>Hello 10</li>
+          {filterList.map((item) => (
+            <NavItem
+              key={item.id}
+              category={item.category}
+              icon={item.img}
+              onClick={() => setSelected(item)}
+              selected={selected?.id === item.id}
+            />
+          ))}
         </ul>
 
         {
