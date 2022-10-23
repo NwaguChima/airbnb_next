@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@types/sass": "^1.43.1",
+    "gsap": "^3.11.3",
     "next": "12.3.1",
     "node-sass": "^7.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@types/node": "18.11.2",

@@ -1,7 +1,6 @@
 @use "../../styles/variables" as varr;
 
 .navContainer {
-  //   background-color: rebeccapurple;
   height: 8rem;
   padding: 2rem varr.$main__padding;
   margin-top: 12rem;
@@ -16,8 +15,15 @@
   -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
   z-index: 1;
 
+  @media screen and (max-width: varr.$breakpoint__l) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   @media screen and (max-width: varr.$breakpoint__md) {
     margin-top: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   &__filter {
@@ -52,7 +58,54 @@
   }
 
   &__nav {
-    flex-grow: 1;
-    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    width: 93%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      max-width: 92%;
+      overflow: scroll;
+      scroll-behavior: smooth;
+      gap: 5rem;
+      //   padding: 1rem;
+
+      &::-webkit-scrollbar {
+        background: transparent;
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    button {
+      background: none;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: varr.$border;
+
+      i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 7px -4px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 7px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 7px -4px rgba(0, 0, 0, 0.75);
+      }
+    }
   }
 }
