@@ -8,7 +8,7 @@
   border-bottom: varr.$border;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 100;
   width: 100%;
   background-color: varr.$main__white;
 
@@ -111,6 +111,7 @@
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
         color: white;
+        font-size: 1.8rem;
       }
     }
 

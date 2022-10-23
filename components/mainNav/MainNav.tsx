@@ -70,7 +70,10 @@ export const MainNav: React.FC<MainNavProps> = ({}) => {
             onClick={() => slide(-200)}
             onMouseEnter={(e) => anim(e)}
             onMouseLeave={(e) => anim2(e)}
-            style={{ opacity: scrollX === 0 ? 0 : 1 }}
+            style={{
+              opacity: scrollX === 0 ? 0 : 1,
+              visibility: scrollX === 0 ? "hidden" : "visible",
+            }}
           >
             <i>
               <MdKeyboardArrowLeft size={20} />
@@ -95,7 +98,10 @@ export const MainNav: React.FC<MainNavProps> = ({}) => {
             onClick={() => slide(+200)}
             onMouseEnter={(e) => anim(e)}
             onMouseLeave={(e) => anim2(e)}
-            style={{ opacity: scrollEnd ? 0 : 1 }}
+            style={{
+              opacity: scrollEnd ? 0 : 1,
+              visibility: scrollEnd ? "hidden" : "visible",
+            }}
           >
             <i>
               <MdKeyboardArrowRight size={20} />

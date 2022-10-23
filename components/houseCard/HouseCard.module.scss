@@ -3,6 +3,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   &__picture {
     display: block;
@@ -44,5 +45,27 @@
   color: varr.$text__black !important;
   span {
     font-weight: 500 !important;
+  }
+}
+
+.likeIcon {
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 3rem;
+
+  svg {
+    path {
+      fill: varr.$text__gray;
+    }
+  }
+}
+
+.liked {
+  svg {
+    path {
+      fill: red;
+    }
   }
 }

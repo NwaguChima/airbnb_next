@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { HouseListInterface } from "../../utils/houseList";
+import { FcLike } from "react-icons/fc";
 import styles from "./HouseCard.module.scss";
 
 interface HouseCardProps {
@@ -9,9 +10,16 @@ interface HouseCardProps {
 }
 
 export const HouseCard: React.FC<HouseCardProps> = ({ house }) => {
-  const [liked, setLiked] = useState(false);
+  const [liked, setLiked] = useState(house.like);
+
   return (
     <div className={styles.card}>
+      <i className={`${styles.likeIcon} ${liked ? styles.liked : ""}`}>
+        <FcLike
+          onClick={() => setLiked(!liked)}
+          //   style={{ border: "1px solid black" }}
+        />
+      </i>
       <div className={styles.card__picture}>
         <Image
           src={house.imageUrl}
