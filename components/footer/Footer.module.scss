@@ -22,23 +22,28 @@
   nav {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-
-    @media screen and (max-width: varr.$breakpoint__l) {
-      gap: 1rem;
-    }
 
     h4 {
       font-weight: 500;
       margin-bottom: 0.5rem;
+      margin-bottom: 3rem;
+
+      @media screen and (max-width: varr.$breakpoint__l) {
+        margin-bottom: 1rem;
+      }
     }
 
     ul {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
       font-weight: 300;
       color: varr.$text__gray;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
 
       @media screen and (max-width: varr.$breakpoint__l) {
         display: grid;
@@ -66,7 +71,6 @@
     margin-bottom: 3rem;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
     padding-top: 0;
   }
 
@@ -83,6 +87,7 @@
     font-weight: 300;
     @media screen and (max-width: varr.$breakpoint__l) {
       order: 2;
+      margin-top: 2rem;
     }
 
     @media screen and (max-width: varr.$breakpoint__md) {
@@ -94,8 +99,13 @@
   &__right {
     display: flex;
     align-items: center;
-    gap: 2rem;
     font-weight: 300;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
 
     li {
       display: flex;

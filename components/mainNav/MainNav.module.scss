@@ -6,7 +6,6 @@
   margin-top: 12rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
   position: sticky;
   top: 8.8rem;
   background-color: varr.$main__white;
@@ -30,7 +29,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     width: 9rem;
     padding: 1.3rem;
     border: varr.$border;
@@ -50,6 +48,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-right: 1rem;
     }
 
     p {
@@ -60,8 +59,8 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
     width: calc(100% - 11.3rem);
+    margin-right: 2rem;
 
     @media screen and (max-width: varr.$breakpoint__md) {
       width: 100%;
@@ -73,7 +72,13 @@
       max-width: 92%;
       overflow: scroll;
       scroll-behavior: smooth;
-      gap: 5rem;
+      margin-right: 1.2rem;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 5rem;
+        }
+      }
 
       &::-webkit-scrollbar {
         background: transparent;
@@ -97,6 +102,11 @@
       justify-content: center;
       align-items: center;
       border: varr.$border;
+
+      // not last child margin left
+      &:not(:last-child) {
+        margin-right: 1.2rem;
+      }
 
       i {
         display: flex;

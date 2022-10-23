@@ -15,10 +15,7 @@ export const HouseCard: React.FC<HouseCardProps> = ({ house }) => {
   return (
     <div className={styles.card}>
       <i className={`${styles.likeIcon} ${liked ? styles.liked : ""}`}>
-        <FcLike
-          onClick={() => setLiked(!liked)}
-          //   style={{ border: "1px solid black" }}
-        />
+        <FcLike onClick={() => setLiked(!liked)} />
       </i>
       <div className={styles.card__picture}>
         <Image

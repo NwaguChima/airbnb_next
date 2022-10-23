@@ -37,7 +37,7 @@ let house = {
   dateRange: "Feb 9 - 16",
   like: false,
   imageUrl:
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
 };
 
 export const ListCopy: any = [];

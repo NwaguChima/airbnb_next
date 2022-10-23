@@ -1,6 +1,7 @@
 import React from "react";
 import { FiGlobe } from "react-icons/fi";
-import { BsCurrencyDollar } from "react-icons/bs";
+import { BsCurrencyDollar, BsCaretUp } from "react-icons/bs";
+
 import styles from "./FooterNav.module.scss";
 
 interface FooterNavProps {}
@@ -32,9 +33,11 @@ export const FooterNav: React.FC<FooterNavProps> = ({}) => {
           </i>
           <span>USD</span>
         </li>
-        <li>
+        <li className={styles.caret}>
           Support &#38; resources
-          <span>&circ;</span>
+          <span>
+            <BsCaretUp />
+          </span>
         </li>
       </ul>
     </nav>

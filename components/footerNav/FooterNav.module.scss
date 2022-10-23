@@ -24,26 +24,48 @@
   &__left {
     display: flex;
     align-items: center;
-    gap: 1rem;
     font-weight: 300;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
   }
 
   &__right {
     display: flex;
     align-items: center;
-    gap: 2rem;
     font-weight: 300;
 
     li {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    li {
       display: flex;
-      gap: 0.5rem;
       align-items: center;
 
       i {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-right: 0.5rem;
       }
     }
+  }
+}
+
+.caret {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
