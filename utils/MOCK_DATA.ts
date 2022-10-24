@@ -9,7 +9,7 @@ export interface MockDataInterface {
   distance: number;
   dateRange: string;
   like: boolean;
-  category: string;
+  category: number;
   imageUrl: string[];
 }
 
@@ -25,7 +25,7 @@ export const data: MockDataInterface[] = [
     distance: 1336,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Beach",
+    category: 1,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
@@ -47,7 +47,7 @@ export const data: MockDataInterface[] = [
     distance: 1068,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Amazing pools",
+    category: 2,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -69,7 +69,7 @@ export const data: MockDataInterface[] = [
     distance: 4243,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Island",
+    category: 3,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/3e37a3ee-6471-4356-b7ca-6856ab59b104.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -91,7 +91,7 @@ export const data: MockDataInterface[] = [
     distance: 1996,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Tropical",
+    category: 4,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/d9f4ff71-ae26-45bd-a1d9-8931b6d03119.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -113,7 +113,7 @@ export const data: MockDataInterface[] = [
     distance: 3614,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Caves",
+    category: 5,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -135,7 +135,7 @@ export const data: MockDataInterface[] = [
     distance: 1963,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "OMG!",
+    category: 6,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-597056829856000897/original/4d876698-f837-4dd6-9369-0db1b5acdb50.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -157,7 +157,7 @@ export const data: MockDataInterface[] = [
     distance: 2808,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Artic",
+    category: 7,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -179,7 +179,7 @@ export const data: MockDataInterface[] = [
     distance: 4657,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Amazing views",
+    category: 8,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
@@ -201,7 +201,7 @@ export const data: MockDataInterface[] = [
     distance: 2817,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Desgin",
+    category: 9,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -223,7 +223,7 @@ export const data: MockDataInterface[] = [
     distance: 4394,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Surfing",
+    category: 10,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/3e37a3ee-6471-4356-b7ca-6856ab59b104.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -245,7 +245,7 @@ export const data: MockDataInterface[] = [
     distance: 3032,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Luxe",
+    category: 11,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/d9f4ff71-ae26-45bd-a1d9-8931b6d03119.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -267,7 +267,7 @@ export const data: MockDataInterface[] = [
     distance: 1741,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Lake",
+    category: 12,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -289,7 +289,7 @@ export const data: MockDataInterface[] = [
     distance: 2690,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Castles",
+    category: 13,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
@@ -311,7 +311,7 @@ export const data: MockDataInterface[] = [
     distance: 3945,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Campers",
+    category: 14,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -333,7 +333,7 @@ export const data: MockDataInterface[] = [
     distance: 3918,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Golfing",
+    category: 15,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/3e37a3ee-6471-4356-b7ca-6856ab59b104.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -355,7 +355,7 @@ export const data: MockDataInterface[] = [
     distance: 2109,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Cabins",
+    category: 16,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/3e37a3ee-6471-4356-b7ca-6856ab59b104.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -377,7 +377,7 @@ export const data: MockDataInterface[] = [
     distance: 4810,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Windmills",
+    category: 17,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/d9f4ff71-ae26-45bd-a1d9-8931b6d03119.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -399,7 +399,7 @@ export const data: MockDataInterface[] = [
     distance: 1448,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Skiing",
+    category: 18,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -421,7 +421,7 @@ export const data: MockDataInterface[] = [
     distance: 2802,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Farms",
+    category: 19,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -443,7 +443,7 @@ export const data: MockDataInterface[] = [
     distance: 1565,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Towers",
+    category: 20,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -465,7 +465,7 @@ export const data: MockDataInterface[] = [
     distance: 2364,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Beach",
+    category: 1,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
@@ -487,7 +487,7 @@ export const data: MockDataInterface[] = [
     distance: 3521,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Amazing pools",
+    category: 2,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -509,7 +509,7 @@ export const data: MockDataInterface[] = [
     distance: 4075,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Island",
+    category: 3,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -531,7 +531,7 @@ export const data: MockDataInterface[] = [
     distance: 4912,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Tropical",
+    category: 4,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/3e37a3ee-6471-4356-b7ca-6856ab59b104.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -553,7 +553,7 @@ export const data: MockDataInterface[] = [
     distance: 2333,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Caves",
+    category: 5,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/3e37a3ee-6471-4356-b7ca-6856ab59b104.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -575,7 +575,7 @@ export const data: MockDataInterface[] = [
     distance: 1425,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "OMG!",
+    category: 6,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/d9f4ff71-ae26-45bd-a1d9-8931b6d03119.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -597,7 +597,7 @@ export const data: MockDataInterface[] = [
     distance: 1076,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Artic",
+    category: 7,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-597056829856000897/original/4d876698-f837-4dd6-9369-0db1b5acdb50.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -619,7 +619,7 @@ export const data: MockDataInterface[] = [
     distance: 3083,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Amazing views",
+    category: 8,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -641,7 +641,7 @@ export const data: MockDataInterface[] = [
     distance: 4780,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Desgin",
+    category: 9,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
@@ -663,7 +663,7 @@ export const data: MockDataInterface[] = [
     distance: 4928,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Surfing",
+    category: 10,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
@@ -685,7 +685,7 @@ export const data: MockDataInterface[] = [
     distance: 4321,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Luxe",
+    category: 11,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -707,7 +707,7 @@ export const data: MockDataInterface[] = [
     distance: 4308,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Lake",
+    category: 12,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/3e37a3ee-6471-4356-b7ca-6856ab59b104.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -729,7 +729,7 @@ export const data: MockDataInterface[] = [
     distance: 3068,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Castles",
+    category: 13,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/d9f4ff71-ae26-45bd-a1d9-8931b6d03119.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -751,7 +751,7 @@ export const data: MockDataInterface[] = [
     distance: 1684,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Campers",
+    category: 14,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -773,7 +773,7 @@ export const data: MockDataInterface[] = [
     distance: 4741,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Golfing",
+    category: 15,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
@@ -795,7 +795,7 @@ export const data: MockDataInterface[] = [
     distance: 2256,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Cabins",
+    category: 16,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/a4550fcc-8aad-4f2a-a602-eabcca3cf3dd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -817,7 +817,7 @@ export const data: MockDataInterface[] = [
     distance: 3099,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Windmills",
+    category: 17,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/3e37a3ee-6471-4356-b7ca-6856ab59b104.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -839,7 +839,7 @@ export const data: MockDataInterface[] = [
     distance: 4689,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Skiing",
+    category: 18,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/d9f4ff71-ae26-45bd-a1d9-8931b6d03119.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -861,7 +861,7 @@ export const data: MockDataInterface[] = [
     distance: 4210,
     dateRange: "Feb 6 - 27",
     like: false,
-    category: "Farms",
+    category: 19,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/d9f4ff71-ae26-45bd-a1d9-8931b6d03119.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",
@@ -883,7 +883,7 @@ export const data: MockDataInterface[] = [
     distance: 2055,
     dateRange: "Feb 6 - 27",
     like: true,
-    category: "Towers",
+    category: 20,
     imageUrl: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-597056829856000897/original/4d876698-f837-4dd6-9369-0db1b5acdb50.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/f8f6ef8f-30ff-4df5-ba1a-b61326ff8f8a.jpg?im_w=720",

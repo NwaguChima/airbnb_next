@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 
 import gsap from "gsap";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
@@ -6,6 +6,7 @@ import styles from "./MainNav.module.scss";
 import { filterList } from "../../utils/filterList";
 import { NavItem } from "./navItem/NavItem";
 import { BsFilter } from "react-icons/bs";
+import FilterContext from "../../context/filterContext";
 
 interface MainNavProps {}
 
@@ -16,6 +17,9 @@ export const MainNav: React.FC<MainNavProps> = ({}) => {
   const [selected, setSelected] = useState<
     { id: number; category: string } | undefined
   >();
+
+  const context = useContext(FilterContext);
+  console.log("context", context);
 
   const slide = (shift: number) => {
     scrollRef.current!.scrollLeft += shift;
@@ -80,7 +84,10 @@ export const MainNav: React.FC<MainNavProps> = ({}) => {
               key={item.id}
               category={item.category}
               icon={item.img}
-              onClick={() => setSelected(item)}
+              onClick={() => {
+                setSelected(item);
+                context!.setFilterValue(item.id);
+              }}
               selected={selected?.id === item.id}
             />
           ))}

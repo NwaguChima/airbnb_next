@@ -5,8 +5,8 @@ type FilterContextProviderProps = {
 };
 
 type FilterContextType = {
-  filterValue: string;
-  setFilterValue: React.Dispatch<React.SetStateAction<string>>;
+  filterValue: number | undefined;
+  setFilterValue: React.Dispatch<React.SetStateAction<number | undefined>>;
 };
 
 const FilterContext = createContext<FilterContextType | null>(null);
@@ -14,7 +14,7 @@ const FilterContext = createContext<FilterContextType | null>(null);
 export const FilterContextProvider = ({
   children,
 }: FilterContextProviderProps) => {
-  const [filterValue, setFilterValue] = useState("");
+  const [filterValue, setFilterValue] = useState<number | undefined>();
 
   return (
     <FilterContext.Provider
