@@ -18,7 +18,7 @@ interface MapProps {
 
 const Map: React.FC<MapProps> = ({ list }) => {
   const [center, setCenter] = useState({ lat: list[0].lat, lng: list[0].lng });
-  const ZOOM_LEVEL = 2;
+  const ZOOM_LEVEL = 2.5;
   const mapRef = useRef();
 
   return (
