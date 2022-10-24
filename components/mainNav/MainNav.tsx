@@ -19,7 +19,6 @@ export const MainNav: React.FC<MainNavProps> = ({}) => {
   >();
 
   const context = useContext(FilterContext);
-  console.log("context", context);
 
   const slide = (shift: number) => {
     scrollRef.current!.scrollLeft += shift;
