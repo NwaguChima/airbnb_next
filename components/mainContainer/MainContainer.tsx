@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { HouseListInterface, ListCopy } from "../../utils/houseList";
 import { HouseCard } from "../houseCard/HouseCard";
 import { MainNav } from "../mainNav/MainNav";
-import { HiOutlineMap } from "react-icons/hi2";
-import { CiMap } from "react-icons/ci";
 import styles from "./MainContainer.module.scss";
+
+import dynamic from "next/dynamic";
+const Map = dynamic(() => import("./Map"), { ssr: false });
 
 interface MainContainerProps {}
 
@@ -21,26 +22,11 @@ export const MainContainer: React.FC<MainContainerProps> = ({}) => {
           ))}
         {showMap && (
           <div className={styles.mapContainer}>
-            {ListCopy.map((house: HouseListInterface, index: number) => (
-              <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-                <TileLayer
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={position}>
-                  <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                  </Popup>
-                </Marker>
-              </MapContainer>
-            ))}
+            <Map list={ListCopy} />
           </div>
         )}
         <div className={styles.map}>
           <p>Show map</p>
-          <i>
-            <HiOutlineMap />
-          </i>
           <i>
             <svg
               viewBox="0 0 32 32"
@@ -56,3 +42,25 @@ export const MainContainer: React.FC<MainContainerProps> = ({}) => {
     </main>
   );
 };
+
+// pages/_document.js
+// import { Html, Head, Main, NextScript } from "next/document";
+
+// export default function Document() {
+//   return (
+//     <Html>
+//       <Head>
+//         <link
+//           rel="stylesheet"
+//           href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+//           integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+//           crossOrigin=""
+//         />
+//       </Head>
+//       <body>
+//         <Main />
+//         <NextScript />
+//       </body>
+//     </Html>
+//   );
+// }
