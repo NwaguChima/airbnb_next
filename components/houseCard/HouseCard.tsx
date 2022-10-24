@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
-import { HouseListInterface } from "../../utils/houseList";
 import { FcLike } from "react-icons/fc";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade, Pagination } from "swiper";
@@ -11,9 +10,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+import { MockDataInterface } from "../../utils/MOCK_DATA";
 
 interface HouseCardProps {
-  house: HouseListInterface;
+  house: MockDataInterface;
 }
 
 export const HouseCard: React.FC<HouseCardProps> = ({ house }) => {
@@ -76,7 +76,7 @@ export const HouseCard: React.FC<HouseCardProps> = ({ house }) => {
           <p>{house.distance} Kilometers away</p>
           <p>{house.dateRange}</p>
           <p className={styles.price}>
-            <span>${house.price}</span> night
+            <span>{house.price}</span> night
           </p>
         </div>
         <span className={styles.card__body__right}>

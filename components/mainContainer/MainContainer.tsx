@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HouseListInterface, ListCopy } from "../../utils/houseList";
+import { MockDataInterface, data } from "../../utils/MOCK_DATA";
 import { HouseCard } from "../houseCard/HouseCard";
 import { MainNav } from "../mainNav/MainNav";
 import { BsListUl, BsMap } from "react-icons/bs";
@@ -13,15 +14,15 @@ const Map = dynamic(() => import("./Map"), { ssr: false });
 interface MainContainerProps {}
 
 export const MainContainer: React.FC<MainContainerProps> = ({}) => {
-  const [showMap, setShowMap] = useState(true);
+  const [showMap, setShowMap] = useState(false);
 
   return (
     <main>
       <MainNav />
       {!showMap && (
         <div className={styles.container}>
-          {ListCopy.map((house: HouseListInterface, index: number) => (
-            <HouseCard house={house} key={index} />
+          {data.map((house: MockDataInterface) => (
+            <HouseCard house={house} key={house.id} />
           ))}
           <div className={styles.map} onClick={() => setShowMap(true)}>
             <p>Show map</p>
