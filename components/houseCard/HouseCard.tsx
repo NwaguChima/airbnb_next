@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { HouseListInterface } from "../../utils/houseList";
@@ -18,7 +18,9 @@ interface HouseCardProps {
 
 export const HouseCard: React.FC<HouseCardProps> = ({ house }) => {
   const [liked, setLiked] = useState(house.like);
-  console.log(house);
+  const swiperNavPrevRef = useRef<HTMLDivElement>(null);
+  const swiperNavNextRef = useRef<HTMLDivElement>(null);
+  const [beginning, setBeginning] = useState(true);
 
   return (
     <div className={styles.card}>
@@ -29,9 +31,20 @@ export const HouseCard: React.FC<HouseCardProps> = ({ house }) => {
         className={styles.card__picture}
         modules={[Navigation, EffectFade, Pagination]}
         slidesPerView={1}
-        navigation
+        navigation={{
+          prevEl: swiperNavPrevRef.current,
+          nextEl: swiperNavNextRef.current,
+        }}
         pagination={{ clickable: true }}
+        loop={true}
         effect={"fade"}
+        onBeforeSlideChangeStart={() => setBeginning(true)}
+        onInit={(swiper: any) => {
+          swiper.params.navigation.prevEl = swiperNavPrevRef.current;
+          swiper.params.navigation.nextEl = swiperNavNextRef.current;
+          swiper.navigation.init();
+          swiper.navigation.update();
+        }}
       >
         {house.imageUrl.map((image, index) => (
           <SwiperSlide key={index} className={styles.swslides}>
@@ -44,6 +57,16 @@ export const HouseCard: React.FC<HouseCardProps> = ({ house }) => {
             />
           </SwiperSlide>
         ))}
+        <div
+          className={`${styles.swiperNavPrev} ${beginning ? styles.start : ""}`}
+          // style={{ display: beginning ? "none" : "flex" }}
+          ref={swiperNavPrevRef}
+        ></div>
+        <div
+          className={styles.swiperNavNext}
+          ref={swiperNavNextRef}
+          onClick={() => setBeginning(false)}
+        ></div>
       </Swiper>
       <div className={styles.card__body}>
         <div className={styles.card__body__left}>

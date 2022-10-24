@@ -15,6 +15,7 @@
     -o-border-radius: 1rem;
 
     .swslides {
+      -webkit-transform: translateZ(0);
       img {
         width: 100%;
         object-fit: cover;
@@ -54,6 +55,18 @@
       }
     }
   }
+
+  // on hover, select .swiperNavNext and and include the .start class
+  &:hover {
+    .swiperNavNext,
+    .swiperNavPrev {
+      display: flex;
+    }
+
+    .start {
+      display: none !important;
+    }
+  }
 }
 
 .price {
@@ -84,3 +97,55 @@
     }
   }
 }
+
+.swiperNavNext,
+.swiperNavPrev {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  display: none;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-50%) scale(1.05);
+    -webkit-transform: translateY(-50%) scale(1.05);
+    -moz-transform: translateY(-50%) scale(1.05);
+    -ms-transform: translateY(-50%) scale(1.05);
+    -o-transform: translateY(-50%) scale(1.05);
+  }
+}
+
+.swiperNavNext {
+  right: 2rem;
+  background-image: url("/images/arrow-right.svg");
+}
+
+.swiperNavPrev {
+  left: 2rem;
+  background-image: url("/images/arrow-left.svg");
+}
+
+// .start {
+//   display: none;
+// }
