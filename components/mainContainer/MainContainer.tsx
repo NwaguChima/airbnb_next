@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HouseListInterface, ListCopy } from "../../utils/houseList";
 import { HouseCard } from "../houseCard/HouseCard";
 import { MainNav } from "../mainNav/MainNav";
@@ -9,13 +9,33 @@ import styles from "./MainContainer.module.scss";
 interface MainContainerProps {}
 
 export const MainContainer: React.FC<MainContainerProps> = ({}) => {
+  const [showMap, setShowMap] = useState(true);
+
   return (
     <main>
       <MainNav />
       <div className={styles.container}>
-        {ListCopy.map((house: HouseListInterface, index: number) => (
-          <HouseCard house={house} key={index} />
-        ))}
+        {!showMap &&
+          ListCopy.map((house: HouseListInterface, index: number) => (
+            <HouseCard house={house} key={index} />
+          ))}
+        {showMap && (
+          <div className={styles.mapContainer}>
+            {ListCopy.map((house: HouseListInterface, index: number) => (
+              <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={position}>
+                  <Popup>
+                    A pretty CSS3 popup. <br /> Easily customizable.
+                  </Popup>
+                </Marker>
+              </MapContainer>
+            ))}
+          </div>
+        )}
         <div className={styles.map}>
           <p>Show map</p>
           <i>
