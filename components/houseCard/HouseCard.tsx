@@ -3,7 +3,14 @@ import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { HouseListInterface } from "../../utils/houseList";
 import { FcLike } from "react-icons/fc";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, EffectFade, Pagination } from "swiper";
 import styles from "./HouseCard.module.scss";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 
 interface HouseCardProps {
   house: HouseListInterface;
@@ -11,21 +18,33 @@ interface HouseCardProps {
 
 export const HouseCard: React.FC<HouseCardProps> = ({ house }) => {
   const [liked, setLiked] = useState(house.like);
+  console.log(house);
 
   return (
     <div className={styles.card}>
       <i className={`${styles.likeIcon} ${liked ? styles.liked : ""}`}>
         <FcLike onClick={() => setLiked(!liked)} />
       </i>
-      <div className={styles.card__picture}>
-        <Image
-          src={house.imageUrl}
-          alt={house.town}
-          width={345}
-          height={340}
-          style={{ borderRadius: "1rem" }}
-        />
-      </div>
+      <Swiper
+        className={styles.card__picture}
+        modules={[Navigation, EffectFade, Pagination]}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        effect={"fade"}
+      >
+        {house.imageUrl.map((image, index) => (
+          <SwiperSlide key={index} className={styles.swslides}>
+            <Image
+              src={image}
+              alt={house.town}
+              width={345}
+              height={340}
+              style={{ borderRadius: "1rem" }}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <div className={styles.card__body}>
         <div className={styles.card__body__left}>
           <h3>

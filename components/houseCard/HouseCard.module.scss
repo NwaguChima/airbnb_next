@@ -6,7 +6,20 @@
   position: relative;
 
   &__picture {
-    display: block;
+    width: 34rem;
+    height: auto;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+
+    .swslides {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   &__body {

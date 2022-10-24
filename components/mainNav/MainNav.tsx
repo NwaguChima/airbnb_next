@@ -1,13 +1,7 @@
 import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y, EffectFade } from "swiper";
+
 import gsap from "gsap";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
-
 import styles from "./MainNav.module.scss";
 import { filterList } from "../../utils/filterList";
 import { NavItem } from "./navItem/NavItem";
@@ -22,8 +16,6 @@ export const MainNav: React.FC<MainNavProps> = ({}) => {
   const [selected, setSelected] = useState<
     { id: number; category: string } | undefined
   >();
-
-  console.log(selected);
 
   const slide = (shift: number) => {
     scrollRef.current!.scrollLeft += shift;
