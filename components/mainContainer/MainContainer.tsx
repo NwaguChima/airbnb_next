@@ -35,7 +35,7 @@ export const MainContainer: React.FC<MainContainerProps> = ({}) => {
 
       {showMap && (
         <div className={styles.mapContainer}>
-          <Map list={ListCopy} />
+          <Map list={data} />
           <div className={styles.map} onClick={() => setShowMap(false)}>
             <p>Show List</p>
             <i>
