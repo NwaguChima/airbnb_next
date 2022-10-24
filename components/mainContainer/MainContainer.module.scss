@@ -85,9 +85,12 @@
 }
 
 .mapContainer {
+  @media screen and (max-width: varr.$breakpoint__md) {
+    padding-top: 9rem;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 10%;
   width: 100vw;
 }

@@ -25,7 +25,7 @@ const Map: React.FC<MapProps> = ({ list }) => {
     <MapContainer
       center={center}
       zoom={ZOOM_LEVEL}
-      //   scrollWheelZoom={true}
+      scrollWheelZoom={true}
       ref={mapRef as any}
       style={{ height: "100vh", width: "100%", zIndex: 0 }}
     >
