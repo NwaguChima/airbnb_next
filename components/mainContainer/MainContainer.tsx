@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { HouseListInterface, ListCopy } from "../../utils/houseList";
 import { MockDataInterface, data } from "../../utils/MOCK_DATA";
 import { HouseCard } from "../houseCard/HouseCard";
 import { MainNav } from "../mainNav/MainNav";
-import { BsListUl, BsMap } from "react-icons/bs";
-import { CiMap } from "react-icons/ci";
+import { BsListUl } from "react-icons/bs";
 import { IoMapOutline } from "react-icons/io5";
 import styles from "./MainContainer.module.scss";
 
