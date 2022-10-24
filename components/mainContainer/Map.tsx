@@ -1,8 +1,7 @@
 import React, { useRef, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { HouseListInterface } from "../../utils/houseList";
-import { FiGlobe } from "react-icons/fi";
-import L from "leaflet";
+// import L from "leaflet";
 
 // import "leaflet/dist/leaflet.css";
 
@@ -19,16 +18,16 @@ interface MapProps {
 
 const Map: React.FC<MapProps> = ({ list }) => {
   const [center, setCenter] = useState({ lat: list[0].lat, lng: list[0].lng });
-  const ZOOM_LEVEL = 1;
+  const ZOOM_LEVEL = 2;
   const mapRef = useRef();
 
   return (
     <MapContainer
       center={center}
       zoom={ZOOM_LEVEL}
-      scrollWheelZoom={true}
+      //   scrollWheelZoom={true}
       ref={mapRef as any}
-      style={{ height: "40rem", width: "100%" }}
+      style={{ height: "100vh", width: "100%", zIndex: 0 }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
